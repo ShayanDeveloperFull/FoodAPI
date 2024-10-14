@@ -1,7 +1,7 @@
 .itemContainer {
   width: 300px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
   margin: 20px;
   overflow: hidden;
   font-family: PolySans, sans-serif;

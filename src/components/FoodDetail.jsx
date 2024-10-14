@@ -33,7 +33,7 @@ export default function FoodDetail({ foodID }) {
             <p>🧑Serves {food.servings}</p>
           </strong>
 
-          {food.vegetarian ? "🥕Vegetarian" : "🍖 Non-Vegetarian"}
+          {food.vegetarian ? "🥦Vegetarian" : "🍖 Non-Vegetarian"}
         </div>
         <div>
           💲
