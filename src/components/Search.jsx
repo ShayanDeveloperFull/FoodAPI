@@ -21,7 +21,7 @@ export default function Search({ foodData, setFoodData }) {
       }
     }, 400);
 
-    return () => clearTimeout(handler); // Clean up the timeout
+    return () => clearTimeout(handler);
   }, [query]);
   return (
     <div className={styles.searchContainer}>
