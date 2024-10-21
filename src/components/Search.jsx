@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import styles from "./search.module.css";
 import axios from "axios";
+import styles from "./search.module.css";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 const URL = "https://api.spoonacular.com/recipes/complexSearch";
@@ -21,7 +21,7 @@ export default function Search({ foodData, setFoodData }) {
       }
     }, 400);
 
-    return () => clearTimeout(handler);
+    return () => clearTimeout(handler); // Clean up the timeout
   }, [query]);
   return (
     <div className={styles.searchContainer}>

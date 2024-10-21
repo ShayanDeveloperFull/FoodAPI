@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 import styles from "./fooddetails.module.css";
 import ItemList from "./ItemList";
-import axios from "axios";
 
 export default function FoodDetail({ foodID }) {
   const [food, setFood] = useState({});
