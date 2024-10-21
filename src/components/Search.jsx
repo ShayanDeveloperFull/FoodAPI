@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./search.module.css";
+import axios from "axios";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 const URL = "https://api.spoonacular.com/recipes/complexSearch";
@@ -10,10 +11,11 @@ export default function Search({ foodData, setFoodData }) {
     const handler = setTimeout(() => {
       if (query) {
         async function fetchFood() {
-          const res = await fetch(`${URL}?query=${query}&apiKey=${API_KEY}`);
-          const data = await res.json();
-          console.log(data.results);
-          setFoodData(data.results);
+          const res = await axios.get(
+            `${URL}?query=${query}&apiKey=${API_KEY}`
+          );
+          console.log(res.data.results);
+          setFoodData(res.data.results);
         }
         fetchFood();
       }

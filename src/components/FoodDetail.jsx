@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./fooddetails.module.css";
 import ItemList from "./ItemList";
+import axios from "axios";
 
 export default function FoodDetail({ foodID }) {
   const [food, setFood] = useState({});
@@ -10,10 +11,9 @@ export default function FoodDetail({ foodID }) {
   const API_KEY = import.meta.env.VITE_API_KEY;
   useEffect(() => {
     async function fetchFood() {
-      const res = await fetch(`${URL}?apiKey=${API_KEY}`);
-      const data = await res.json();
-      console.log(data);
-      setFood(data);
+      const res = await axios.get(`${URL}?apiKey=${API_KEY}`);
+      console.log(res.data);
+      setFood(res.data);
       setIsLoading(false);
     }
     fetchFood();
