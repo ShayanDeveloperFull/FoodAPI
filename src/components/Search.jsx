@@ -5,7 +5,7 @@ import styles from "./search.module.css";
 const API_KEY = import.meta.env.VITE_API_KEY;
 const URL = "https://api.spoonacular.com/recipes/complexSearch";
 
-export default function Search({ foodData, setFoodData }) {
+export default function Search({ setFoodData }) {
   const [query, setQuery] = useState("Pie");
   useEffect(() => {
     const handler = setTimeout(() => {

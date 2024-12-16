@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
       <Nav />
-      <Search foodData={foodData} setFoodData={setFoodData} />
+      <Search setFoodData={setFoodData} />
       <Container>
         <InnerContainer>
           <FoodList foodData={foodData} setFoodID={setFoodID} />
