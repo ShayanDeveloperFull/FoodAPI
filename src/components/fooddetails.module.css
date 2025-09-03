@@ -11,9 +11,11 @@
 .recipeName {
   font-size: 24px;
   margin-bottom: 10px;
+  padding-right: 40px;
 }
 
 .recipeImage {
+  width: 100%;
   height: auto;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -24,6 +26,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .recipeInstructions {
@@ -34,8 +38,37 @@
 
 .recipeInstructions ol {
   margin-left: 0px;
+  padding-left: 20px;
 }
 
 .recipeInstructions li {
   margin-left: 10px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  .recipeCard {
+    margin: 0;
+    padding: 15px;
+    box-shadow: none;
+    border-radius: 0;
+    max-width: none;
+  }
+
+  .recipeName {
+    font-size: 20px;
+    padding-right: 50px;
+  }
+
+  .recipeDetails {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .recipeDetails span,
+  .recipeDetails strong {
+    display: block;
+  }
 }

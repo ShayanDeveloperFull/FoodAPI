@@ -1,8 +1,17 @@
 .nav {
-  font-size: 2em;
+  font-size: 1.5em;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: #393e46;
-  padding: 30px;
+  padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    font-size: 2em;
+    padding: 30px;
+    text-align: left;
+  }
 }
