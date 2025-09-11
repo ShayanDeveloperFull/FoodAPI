@@ -12,6 +12,7 @@ function App() {
   const [foodData, setFoodData] = useState([]);
   const [foodID, setFoodID] = useState("650946");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSearchLoading, setIsSearchLoading] = useState(true);
 
   const handleViewRecipe = (id) => {
     setFoodID(id);
@@ -28,10 +29,14 @@ function App() {
   return (
     <div>
       <Nav />
-      <Search setFoodData={setFoodData} />
+      <Search setFoodData={setFoodData} setIsLoading={setIsSearchLoading} />
       <Container>
         <InnerContainer>
-          <FoodList foodData={foodData} setFoodID={handleViewRecipe} />
+          <FoodList
+            foodData={foodData}
+            setFoodID={handleViewRecipe}
+            isLoading={isSearchLoading}
+          />
         </InnerContainer>
         <InnerContainer className="desktop-only">
           <FoodDetail foodID={foodID} />
