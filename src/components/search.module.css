@@ -1,17 +1,55 @@
 .searchContainer {
-  margin: 20px auto;
+  margin: 30px auto;
   width: calc(100% - 40px);
-  max-width: 300px;
+  max-width: 500px;
   position: relative;
 }
 
 .input {
   border: none;
-  border-bottom: 1px solid #e3e4dc;
-  padding: 12px 20px;
+  border-radius: 25px;
+  padding: 18px 25px;
   width: 100%;
   outline: none;
   font-size: 16px;
-  color: #393e46;
+  color: #333;
   box-sizing: border-box;
+  background: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input:focus {
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px);
+}
+
+.input::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+
+.searchContainer::before {
+  content: "🔍";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #999;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .searchContainer {
+    max-width: 600px;
+    margin: 40px auto;
+  }
+
+  .input {
+    font-size: 18px;
+    padding: 20px 30px;
+  }
 }

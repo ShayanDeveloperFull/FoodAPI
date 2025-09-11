@@ -1,10 +1,17 @@
 .parentContainer {
   display: flex;
   flex-direction: column;
+  min-height: calc(100vh - 120px);
+  padding: 20px 0;
+  gap: 20px;
 }
 
 @media (min-width: 768px) {
   .parentContainer {
     flex-direction: row;
+    padding: 30px 20px;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 }

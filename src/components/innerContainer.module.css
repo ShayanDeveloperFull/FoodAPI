@@ -1,5 +1,20 @@
 .innerContainer {
   flex: 1;
-  padding-right: 10px;
-  margin: 10px;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+  .innerContainer {
+    margin: 0 10px;
+    padding: 0 15px;
+  }
+
+  .innerContainer:first-child {
+    max-width: 500px;
+  }
+
+  .innerContainer:last-child {
+    flex: 1.2;
+  }
 }
